@@ -1,5 +1,5 @@
 select
-     date_trunc('month', day) as month,
+     cast(date_trunc('month', day) as date) as month,
     'key_metrics' as fact_category,
     'landings' as metric,
      cast(sum(value) as int) as landings
